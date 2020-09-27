@@ -1,3 +1,14 @@
+# Color Switcher
+[Site](color-switcher.surge.sh)
+React Hooks tutorial by Ali Spittel
+
+### Get Starting
+fork and clone
+```bash 
+npm i 
+npm run start
+```
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
