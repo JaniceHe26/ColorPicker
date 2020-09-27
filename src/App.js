@@ -1,24 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from "react";
 import './App.css';
+import ColorChangeButton from './ColorChangeButton';
 
+//Parents Component
 function App() {
+  const [color, setColor] = useState("");
+  // console.log(color);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`react-root ${color}`}>
+      <div className="centered">
+        <h1>Color Picker</h1>
+        {/* Passing props name color, value comes after the equal sign*/}
+          <ColorChangeButton color='red' setColor={setColor} />
+          <ColorChangeButton color='blue' setColor={setColor} />
+          <ColorChangeButton color='green' setColor={setColor}/>
+        {/* {color} */}
+        {/* <button className="red" onClick={() => setColor('red')}>Red</button>
+        <button className="blue" onClick={() => setColor('blue')}>Blue</button>
+        <button className="green"o nClick={() => setColor('green')}>Green</button> */}
+      </div>
     </div>
   );
 }
